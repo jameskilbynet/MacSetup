@@ -20,7 +20,11 @@ declare -a cask_apps=(
 'nextcloud'
 'istatmenus'
 'fish'
+'remote desktop manager'
+'github'
 )
 
 for app in "${cask_apps[@]}"; do
   brew cask install "$app"
+  done
+  
