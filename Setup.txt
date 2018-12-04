@@ -1,6 +1,5 @@
 # Basic Mac Setup Instructinos
 
-
 #Install brew
 
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -16,4 +15,4 @@ brew cask install slack
 brew cask install spotify
 brew cask install vlc
 brew cask install postman
-brew cask install vmware-fusion 
+brew cask install vmware-fusion
