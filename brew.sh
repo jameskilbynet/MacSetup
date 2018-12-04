@@ -8,3 +8,4 @@ fi
 #Use Brew to inatall a few  usefull tools
 brew install terraform
 brew install openssl
+brew install mas
