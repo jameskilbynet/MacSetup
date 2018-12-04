@@ -26,6 +26,7 @@ declare -a cask_apps=(
 ‘postman’
 ‘slack’
 'firefox' 
+'nextcloud'
 )
 
 for app in "${cask_apps[@]}"; do
