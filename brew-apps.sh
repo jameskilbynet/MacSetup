@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-# Install apps
-
-brew tap caskroom/caskroom
-
 # Use Cask within Brew to deploy some more software 
 declare -a cask_apps=(
 
