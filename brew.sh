@@ -1,5 +1,3 @@
-# Basic Mac Setup Instructinos
-
 # Check for Homebrew,
 # Install if we don't have it
 if test ! $(which brew); then

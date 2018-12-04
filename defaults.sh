@@ -13,11 +13,9 @@ fi
 # Close any open System Preferences panes, to prevent them from overriding settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
 
-
 # Set Desktop as the default location for new Finder windows
 defaults write com.apple.finder NewWindowTarget -string "PfDe"
 defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Desktop/"
-
 
 chflags nohidden ~/Library     # Show the ~/Library folder
 sudo chflags nohidden /Volumes # Show the /Volumes folder
