@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 # Use Cask within Brew to deploy some more software 
+brew tap caskroom/caskroom
 declare -a cask_apps=(
 
 ‘adobe-creative-cloud’
