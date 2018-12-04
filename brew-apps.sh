@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Use Cask within Brew to deploy some more software 
-brew tap caskroom/caskroom
+
 declare -a cask_apps=(
 
 ‘adobe-creative-cloud’
@@ -27,4 +27,3 @@ declare -a cask_apps=(
 for app in "${cask_apps[@]}"; do
   brew cask install "$app"
   done
-  
