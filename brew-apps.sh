@@ -17,10 +17,11 @@ declare -a cask_apps=(
 'slack'
 'firefox' 
 'nextcloud'
-'istatmenus'
+'istat-menus'
 'fish'
-'remote desktop manager'
+'remote-desktop-manager'
 'github'
+'droplr'
 )
 
 for app in "${cask_apps[@]}"; do
