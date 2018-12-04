@@ -4,18 +4,18 @@
 
 declare -a cask_apps=(
 
-‘adobe-creative-cloud’
-‘alfred’
-‘authy’
+'adobe-creative-cloud'
+'alfred'
+'authy'
 'iterm2'
 'vmware-fusion'
 'google chrome'
 'powershell'
 'vlc'
 'spotify'
-‘google-chrome’
-‘postman’
-‘slack’
+'google-chrome'
+'postman'
+'slack'
 'firefox' 
 'nextcloud'
 'istatmenus'
