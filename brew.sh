@@ -6,6 +6,5 @@ if test ! $(which brew); then
 fi
 
 #Use Brew to inatall a few  usefull tools
-brew install caskroom/cask/brew-cask
 brew install terraform
 brew install openssl
