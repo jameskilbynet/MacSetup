@@ -6,6 +6,6 @@ cd ~/Downloads
 
 curl -sL https://raw.githubusercontent.com/jameskilbynet/MacSetup/master/defaults.sh | bash
 curl -O https://raw.githubusercontent.com/jameskilbynet/MacSetup/master/brew.sh
-chmod +x install.sh
-./install.sh
+chmod +x brew.sh
+./brew.sh
 ```
