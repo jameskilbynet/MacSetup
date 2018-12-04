@@ -9,7 +9,6 @@ declare -a cask_apps=(
 'authy'
 'iterm2'
 'vmware-fusion'
-'google chrome'
 'powershell'
 'vlc'
 'spotify'
