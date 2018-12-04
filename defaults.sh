@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-# Adapted from https://github.com/pathikrit/mac-setup-script/raw/master/defaults.sh
+#Adapted from https://github.com/pathikrit/mac-setup-script/raw/master/defaults.sh
+
+set -x 
 
 if [[ -z "${CI}" ]]; then
   sudo -v # Ask for the administrator password upfront
