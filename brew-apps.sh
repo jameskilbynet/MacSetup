@@ -22,6 +22,8 @@ declare -a cask_apps=(
 'remote-desktop-manager'
 'github'
 'droplr'
+'controlpane'
+'chromecast'
 )
 
 for app in "${cask_apps[@]}"; do
