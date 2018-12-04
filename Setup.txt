@@ -7,14 +7,25 @@
 brew install terraform
 brew install openssl
 
-brew cask install
-brew cask install alfred
-brew cask install google-chrone
-brew cask install powershell
-brew cask install slack
-brew cask install spotify
-brew cask install vlc
-brew cask install postman
-brew cask install vmware-fusion
-brew cask install adobe-creative-cloud
-brew cask install iterm2
+
+declare -a cask_apps=(
+
+‘adobe-creative-cloud’
+‘alfred’
+‘authy’
+'iterm2'
+'vmware-fusion'
+'google chrome'
+'powershell'
+‘flume’
+'vlc'
+'spotify'
+‘google-chrome’
+‘postman’
+‘slack’
+ 
+)
+
+for app in "${cask_apps[@]}"; do
+  brew cask install "$app"
+done
