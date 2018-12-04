@@ -11,4 +11,3 @@ fi
 brew install caskroom/cask/brew-cask
 brew install terraform
 brew install openssl
-

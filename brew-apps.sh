@@ -14,7 +14,6 @@ declare -a cask_apps=(
 'vmware-fusion'
 'google chrome'
 'powershell'
-‘flume’
 'vlc'
 'spotify'
 ‘google-chrome’
@@ -23,6 +22,7 @@ declare -a cask_apps=(
 'firefox' 
 'nextcloud'
 'istatmenus'
+'fish'
 )
 
 for app in "${cask_apps[@]}"; do
