@@ -1,13 +1,8 @@
-# Basic Mac Setup Instructinos
+#!/usr/bin/env bash
 
-#Install brew
+# Install apps
 
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-#Use Brew to inatall a few  usefull tools
-
-brew install terraform
-brew install openssl
+brew tap caskroom/caskroom
 
 # Use Cask within Brew to deploy some more software 
 declare -a cask_apps=(
@@ -27,8 +22,8 @@ declare -a cask_apps=(
 ‘slack’
 'firefox' 
 'nextcloud'
+'istatmenus'
 )
 
 for app in "${cask_apps[@]}"; do
   brew cask install "$app"
-done
