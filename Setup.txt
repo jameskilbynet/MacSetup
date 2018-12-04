@@ -1,0 +1,17 @@
+# Basic Mac Setup Instructinos
+
+
+#Install brew
+
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+brew install terraform
+brew install openssl
+
+brew cask install
+brew cask install alfred
+brew cask install google-chrone
+brew cask install powershell
+brew cask install slack
+brew cask install spotify
+brew cask install vlc
