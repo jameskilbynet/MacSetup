@@ -11,3 +11,8 @@ brew install mackup
 brew install openssl
 brew install mas
 brew cleanup
+# Install apps using MAS
+echo   Sign In to Apple store
+
+#tweetdeck
+mas install 485812721 
