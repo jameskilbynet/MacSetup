@@ -7,5 +7,7 @@ fi
 
 #Use Brew to inatall a few  usefull tools
 brew install terraform
+brew install mackup
 brew install openssl
 brew install mas
+brew cleanup
