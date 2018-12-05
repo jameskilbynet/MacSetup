@@ -25,6 +25,7 @@ declare -a cask_apps=(
 'controlpane'
 'chromecast'
 'synergy'
+'duet'
 )
 
 for app in "${cask_apps[@]}"; do
