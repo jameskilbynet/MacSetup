@@ -15,4 +15,8 @@ brew cleanup
 echo   Sign In to Apple store
 
 #tweetdeck
-mas install 485812721 
+mas install 485812721
+#todoist 
+mas install 585829637
+#pocket
+mas install 568494494
