@@ -7,8 +7,6 @@ declare -a cask_apps=(
 'adobe-creative-cloud'
 'alfred'
 'authy'
-'chromecast'
-'controlpane'
 'droplr'
 'duet'
 'firefox'
