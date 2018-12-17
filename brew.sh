@@ -10,6 +10,7 @@ brew install terraform
 brew install mackup
 brew install openssl
 brew install mas
+brew install npm
 brew cleanup
 # Install apps using MAS
 echo   Sign In to Apple store
