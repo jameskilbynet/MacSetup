@@ -28,6 +28,7 @@ declare -a cask_apps=(
 'visual-studio-code'
 'vlc'
 'vmware-fusion'
+'whatsapp'
 )
 
 for app in "${cask_apps[@]}"; do

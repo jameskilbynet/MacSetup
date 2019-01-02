@@ -20,4 +20,6 @@ mas install 485812721
 #todoist 
 mas install 585829637
 #pocket
-mas install 568494494
+mas install 568494494b
+#lastpass
+mas install 926036361
