@@ -8,7 +8,6 @@ declare -a cask_apps=(
 'alfred'
 'authy'
 'cakebrew'
-'droplr'
 'duet'
 'firefox'
 'fish'
