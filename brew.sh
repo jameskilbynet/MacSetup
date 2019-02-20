@@ -11,6 +11,7 @@ brew install mackup
 brew install openssl
 brew install mas
 brew install npm
+brew install nmap
 brew cleanup
 # Install apps using MAS
 echo   Sign In to Apple store
