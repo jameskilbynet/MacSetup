@@ -21,6 +21,7 @@ declare -a cask_apps=(
 'postman'
 'powershell'
 'remote-desktop-manager'
+'signal'
 'slack'
 'spotify'
 'steam'
