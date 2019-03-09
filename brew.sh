@@ -12,6 +12,8 @@ brew install openssl
 brew install mas
 brew install npm
 brew install nmap
+brew install watch
+brew install tmux
 brew cleanup
 # Install apps using MAS
 echo   Sign In to Apple store
