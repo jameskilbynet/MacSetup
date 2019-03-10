@@ -17,6 +17,7 @@ declare -a cask_apps=(
 'google-chrome'
 'istat-menus'
 'iterm2'
+'microsoft-teams'
 'nextcloud'
 'postman'
 'powershell'
