@@ -36,3 +36,6 @@ declare -a cask_apps=(
 for app in "${cask_apps[@]}"; do
   brew cask install "$app"
   done
+
+
+pwsh Install-Module -Name VMware.PowerCLI -Scope CurrentUser
