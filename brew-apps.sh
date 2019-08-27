@@ -19,6 +19,7 @@ declare -a cask_apps=(
 'iterm2'
 'microsoft-teams'
 'nextcloud'
+'osxfuse'
 'postman'
 'powershell'
 'remote-desktop-manager'
