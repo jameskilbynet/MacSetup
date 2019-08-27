@@ -13,6 +13,7 @@ brew install openssl
 brew install mas
 brew install npm
 brew install nmap
+brew install sshfs
 brew install watch
 brew install tmux
 brew install zsh
