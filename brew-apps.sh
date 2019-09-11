@@ -18,6 +18,7 @@ declare -a cask_apps=(
 'istat-menus'
 'iterm2'
 'microsoft-teams'
+'moom'
 'nextcloud'
 'osxfuse'
 'postman'
