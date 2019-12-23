@@ -15,6 +15,7 @@ brew install kubernetes-cli
 brew install mas
 brew install npm
 brew install nmap
+brew install sshfs
 brew install watch
 brew install tmux
 brew install zsh
@@ -32,3 +33,5 @@ mas install 568494494b
 mas install 926036361
 #ihosts
 mas install 1102004240 
+# Gemini 2
+mas install 1090488118 

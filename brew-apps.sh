@@ -18,7 +18,9 @@ declare -a cask_apps=(
 'istat-menus'
 'iterm2'
 'microsoft-teams'
+'moom'
 'nextcloud'
+'osxfuse'
 'postman'
 'powershell'
 'remote-desktop-manager'
@@ -36,3 +38,6 @@ declare -a cask_apps=(
 for app in "${cask_apps[@]}"; do
   brew cask install "$app"
   done
+
+
+pwsh Install-Module -Name VMware.PowerCLI -Scope CurrentUser
