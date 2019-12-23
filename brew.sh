@@ -10,6 +10,8 @@ brew install awscli
 brew install terraform
 brew install mackup
 brew install openssl
+brew install kubernetes-helm
+brew install kubernetes-cli
 brew install mas
 brew install npm
 brew install nmap
