@@ -23,6 +23,7 @@ declare -a cask_apps=(
 'osxfuse'
 'postman'
 'powershell'
+'plex-media-player'
 'remote-desktop-manager'
 'signal'
 'slack'
