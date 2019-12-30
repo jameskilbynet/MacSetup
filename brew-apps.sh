@@ -13,6 +13,7 @@ declare -a cask_apps=(
 'firefox'
 'fish'
 'filezilla'
+'grammarly'
 'github'
 'google-chrome'
 'istat-menus'
