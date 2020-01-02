@@ -7,6 +7,7 @@ fi
 
 #Use Brew to inatall a few  usefull tools
 brew install awscli
+brew install ansible
 brew install terraform
 brew install mackup
 brew install openssl
