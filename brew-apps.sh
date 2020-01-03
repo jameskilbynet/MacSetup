@@ -10,7 +10,6 @@ declare -a cask_apps=(
 'balenaetcher'
 'cakebrew'
 'firefox'
-'filezilla'
 'grammarly'
 'github'
 'google-chrome'
