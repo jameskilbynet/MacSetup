@@ -12,7 +12,8 @@ brew install terraform
 brew install mackup
 brew install openssl
 brew install kubernetes-helm
-brew install kubernetes-cli
+brew install kubernetes-cl
+brew install minikube
 brew install mas
 brew install npm
 brew install nmap
