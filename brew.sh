@@ -19,6 +19,7 @@ brew install minikube
 brew install mas
 brew install npm
 brew install nmap
+brew install ruby
 brew install sshfs
 brew install watch
 brew install tmux
