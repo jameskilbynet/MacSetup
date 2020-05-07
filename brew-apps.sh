@@ -15,6 +15,7 @@ declare -a cask_apps=(
 'google-chrome'
 'istat-menus'
 'iterm2'
+'keybase'
 'macdown'
 'microsoft-teams'
 'moom'
