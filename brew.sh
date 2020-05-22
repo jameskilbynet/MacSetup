@@ -21,6 +21,7 @@ brew install npm
 brew install nmap
 brew install ruby
 brew install sshfs
+brew install vault
 brew install watch
 brew install tmux
 brew install zsh
@@ -30,8 +31,6 @@ echo   Sign In to Apple store
 
 #tweetdeck
 mas install 485812721
-#todoist 
-mas install 585829637
 #pocket
 mas install 926036361
 #ihosts
