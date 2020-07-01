@@ -8,7 +8,6 @@ fi
 #Use Brew to inatall a few  usefull tools
 brew install ansible
 brew install awscli
-brew install ansible
 brew install terraform
 brew install mackup
 brew inatall minikube
