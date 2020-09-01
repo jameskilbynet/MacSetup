@@ -26,7 +26,6 @@ declare -a cask_apps=(
 'remote-desktop-manager'
 'signal'
 'slack'
-'spotify'
 'steam'
 'visual-studio-code'
 'vlc'
