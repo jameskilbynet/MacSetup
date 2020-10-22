@@ -23,6 +23,7 @@ declare -a cask_apps=(
 'postman'
 'powershell'
 'plex-media-player'
+'plexamp'
 'remote-desktop-manager'
 'signal'
 'slack'
