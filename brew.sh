@@ -10,7 +10,6 @@ brew install ansible
 brew install awscli
 brew install terraform
 brew install mackup
-brew inatall minikube
 brew install openssl
 brew install kubernetes-helm
 brew install kubernetes-cl
