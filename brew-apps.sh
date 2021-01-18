@@ -15,6 +15,7 @@ declare -a cask_apps=(
 'istat-menus'
 'iterm2'
 'keybase'
+'krisp'
 'kindle'
 'macdown'
 'microsoft-teams'
@@ -31,7 +32,6 @@ declare -a cask_apps=(
 'vlc'
 'vmware-fusion'
 'vmware-horizon-client'
-'whatsapp'
 )
 
 for app in "${cask_apps[@]}"; do
