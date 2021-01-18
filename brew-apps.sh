@@ -15,6 +15,7 @@ declare -a cask_apps=(
 'istat-menus'
 'iterm2'
 'keybase'
+'kindle'
 'macdown'
 'microsoft-teams'
 'moom'
@@ -29,6 +30,7 @@ declare -a cask_apps=(
 'visual-studio-code'
 'vlc'
 'vmware-fusion'
+'vmware-horizon-client'
 'whatsapp'
 )
 
