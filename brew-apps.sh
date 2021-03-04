@@ -20,7 +20,6 @@ declare -a cask_apps=(
 'microsoft-teams'
 'moom'
 'osxfuse'
-'packer'
 'postman'
 'powershell'
 'plex-media-player'
