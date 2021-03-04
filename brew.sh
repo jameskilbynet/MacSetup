@@ -7,6 +7,7 @@ fi
 
 #Use Brew to inatall a few  usefull tools
 brew install ansible
+brew install asciinema
 brew install awscli
 brew install terraform
 brew install mackup
