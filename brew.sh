@@ -18,6 +18,7 @@ brew install minikube
 brew install mas
 brew install npm
 brew install nmap
+brew install packer
 brew install ruby
 brew install sshfs
 brew install vault
