@@ -34,7 +34,7 @@ declare -a cask_apps=(
 )
 
 for app in "${cask_apps[@]}"; do
-  brew install --cask "$app"
+  brew install "$app"
   done
 
 
