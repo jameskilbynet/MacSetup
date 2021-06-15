@@ -37,3 +37,5 @@ mas install 926036361
 mas install 1102004240 
 #pocket
 mas install 568494494 
+#slack
+mas install 803453959 
