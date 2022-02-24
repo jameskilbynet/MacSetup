@@ -9,6 +9,7 @@ fi
 brew install ansible
 brew install asciinema
 brew install awscli
+brew install homebrew/cask-drivers/elgato-stream-deck
 brew install terraform
 brew install mackup
 brew install openssl
