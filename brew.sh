@@ -21,7 +21,7 @@ brew install npm
 brew install nmap
 brew install packer
 brew install ruby
-brew install sshfs
+brew install synology-drive
 brew install vault
 brew install watch
 brew install tmux
