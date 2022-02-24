@@ -13,13 +13,10 @@ declare -a cask_apps=(
 'google-chrome'
 'istat-menus'
 'iterm2'
-'keybase'
 'krisp'
 'kindle'
 'macdown'
-'microsoft-teams'
 'moom'
-'osxfuse'
 'postman'
 'powershell'
 'plex-media-player'
@@ -29,7 +26,6 @@ declare -a cask_apps=(
 'slack'
 'visual-studio-code'
 'vlc'
-'vmware-fusion'
 'vmware-horizon-client'
 )
 
