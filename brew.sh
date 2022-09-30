@@ -13,7 +13,7 @@ brew install homebrew/cask-drivers/elgato-stream-deck
 brew install terraform
 brew install mackup
 brew install openssl
-brew install kubernetes-helm
+brew install helm
 brew install kubernetes-cli
 brew install minikube
 brew install mas
