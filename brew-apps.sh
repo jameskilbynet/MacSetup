@@ -19,7 +19,7 @@ declare -a cask_apps=(
 'moom'
 'postman'
 'powershell'
-'plex-media-player'
+'plex'
 'plexamp'
 'remote-desktop-manager'
 'signal'
