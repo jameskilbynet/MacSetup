@@ -33,4 +33,5 @@ for app in "${cask_apps[@]}"; do
   done
 
 
-pwsh Install-Module -Name VMware.PowerCLI -Scope CurrentUser
+pwsh 
+Install-Module -Name VMware.PowerCLI -Scope CurrentUser
