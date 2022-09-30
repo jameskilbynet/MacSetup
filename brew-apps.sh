@@ -23,7 +23,6 @@ declare -a cask_apps=(
 'plexamp'
 'remote-desktop-manager'
 'signal'
-'slack'
 'visual-studio-code'
 'vlc'
 'vmware-horizon-client'
