@@ -17,6 +17,7 @@ brew install openssl
 brew install helm
 brew install kubernetes-cli
 brew install minikube
+brew install mist
 brew install mas
 brew install npm
 brew install nmap
