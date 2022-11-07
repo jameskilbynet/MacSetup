@@ -28,6 +28,7 @@ brew install synology-drive
 brew install vault
 brew install watch
 brew install tmux
+brew install zoomus
 brew install zsh
 brew cleanup
 # Install apps using MAS
