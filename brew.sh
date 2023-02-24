@@ -34,8 +34,7 @@ brew cleanup
 # Install apps using MAS
 echo   Sign In to Apple store
 
-#tweetdeck
-mas install 485812721
+
 #pocket
 mas install 926036361
 #ihosts
