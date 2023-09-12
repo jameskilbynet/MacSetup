@@ -13,6 +13,7 @@ brew install cloudflare-warp
 brew install discord
 brew install homebrew/cask-drivers/elgato-stream-deck
 brew install terraform
+brew install nextcloud
 brew install mackup
 brew install openssl
 brew install helm
