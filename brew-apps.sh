@@ -6,7 +6,6 @@ declare -a cask_apps=(
 
 'arc'
 'adobe-creative-cloud'
-'authy'
 'balenaetcher'
 'firefox'
 'grammarly'

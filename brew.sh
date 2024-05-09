@@ -12,7 +12,7 @@ brew install awscli
 brew install cloudflare-warp
 brew install discord
 brew install deskpad
-brew install homebrew/cask-drivers/elgato-stream-deck
+brew install elgato-stream-deck
 brew install terraform
 brew install nextcloud
 brew install mackup
@@ -26,7 +26,6 @@ brew install npm
 brew install nmap
 brew install packer
 brew install ruby
-brew install synology-drive
 brew install vault
 brew install watch
 brew install tmux
