@@ -10,9 +10,9 @@ HOMEBREW_FORMULAS=(
     "awscli"            # AWS command line interface
     "helm"              # Kubernetes package manager
     "kubernetes-cli"    # Kubernetes command line tool
-    "packer"            # Tool for building machine images
-    "terraform"         # Infrastructure as code
-    "vault"             # Secrets management
+    "hashicorp/tap/packer"     # Tool for building machine images
+    "hashicorp/tap/terraform"  # Infrastructure as code
+    "hashicorp/tap/vault"      # Secrets management
     
     # System Tools
     "mas"               # Mac App Store command line interface

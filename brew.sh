@@ -64,6 +64,10 @@ update_homebrew() {
 install_formulas() {
     log_info "Installing Homebrew formulas..."
     
+    # Add HashiCorp tap for their tools
+    log_info "Adding HashiCorp tap..."
+    brew tap hashicorp/tap
+    
     # Define formula packages (command-line tools)
     local formulas=(
         "ansible"           # Automation tool
@@ -75,11 +79,11 @@ install_formulas() {
         "mas"               # Mac App Store command line interface
         "nmap"              # Network discovery and security auditing
         "openssl"           # SSL/TLS cryptography library
-        "packer"            # Tool for building machine images
+        "hashicorp/tap/packer"  # Tool for building machine images
         "ruby"              # Ruby programming language
-        "terraform"         # Infrastructure as code
+        "hashicorp/tap/terraform"  # Infrastructure as code
         "tmux"              # Terminal multiplexer
-        "vault"             # Secrets management
+        "hashicorp/tap/vault"      # Secrets management
         "watch"             # Execute commands periodically
         "zsh"               # Z shell
     )
