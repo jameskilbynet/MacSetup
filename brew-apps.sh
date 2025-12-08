@@ -45,7 +45,6 @@ install_cask_apps() {
     # Define cask applications with categories
     # Web Browsers
     local browsers=(
-        "arc"                    # Arc browser
         "firefox"                # Mozilla Firefox
         "google-chrome"          # Google Chrome
     )
@@ -62,8 +61,6 @@ install_cask_apps() {
     # Creative & Productivity
     local creative_tools=(
         "adobe-creative-cloud"   # Adobe Creative Suite
-        "grammarly"              # Writing assistant
-        "macdown"                # Markdown editor
         "moom"                   # Window management
     )
     
