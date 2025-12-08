@@ -20,6 +20,9 @@ defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/Desk
 chflags nohidden ~/Library     # Show the ~/Library folder
 sudo chflags nohidden /Volumes # Show the /Volumes folder
 
+# Show full path in Finder title bar
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+
 # Avoid creating .DS_Store files on network or USB volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
@@ -28,3 +31,99 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool true
 defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool true
 defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
+
+###############################################################################
+# Finder & File Management
+###############################################################################
+
+# Show all filename extensions
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+# Show hidden files
+defaults write com.apple.finder AppleShowAllFiles -bool true
+
+# Show status bar in Finder
+defaults write com.apple.finder ShowStatusBar -bool true
+
+# Show path bar in Finder
+defaults write com.apple.finder ShowPathbar -bool true
+
+# Keep folders on top when sorting
+defaults write com.apple.finder _FXSortFoldersFirst -bool true
+
+# Search current folder by default
+defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+
+# Disable warning when changing file extension
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
+# Disable warning when emptying trash
+defaults write com.apple.finder WarnOnEmptyTrash -bool false
+
+###############################################################################
+# Keyboard & Input
+###############################################################################
+
+# Enable key repeat (useful for vim/code editors)
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+
+# Set faster key repeat rate
+defaults write NSGlobalDomain KeyRepeat -int 2
+defaults write NSGlobalDomain InitialKeyRepeat -int 15
+
+# Disable auto-correct
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+
+###############################################################################
+# Screenshots
+###############################################################################
+
+# Save screenshots to Desktop/Screenshots
+mkdir -p "${HOME}/Desktop/Screenshots"
+defaults write com.apple.screencapture location -string "${HOME}/Desktop/Screenshots"
+
+# Save screenshots as PNG (default) or JPG
+defaults write com.apple.screencapture type -string "png"
+
+# Disable shadow in screenshots
+defaults write com.apple.screencapture disable-shadow -bool true
+
+###############################################################################
+# Dock
+###############################################################################
+
+# Auto-hide dock
+defaults write com.apple.dock autohide -bool true
+
+# Remove auto-hide delay
+defaults write com.apple.dock autohide-delay -float 0
+
+# Speed up animation
+defaults write com.apple.dock autohide-time-modifier -float 0.5
+
+# Set dock size
+defaults write com.apple.dock tilesize -int 48
+
+# Don't show recent applications
+defaults write com.apple.dock show-recents -bool false
+
+###############################################################################
+# Performance
+###############################################################################
+
+# Disable animations when opening applications
+defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
+
+# Speed up Mission Control animations
+defaults write com.apple.dock expose-animation-duration -float 0.1
+
+###############################################################################
+# Apply Changes
+###############################################################################
+
+# Restart affected applications
+killall Finder
+killall Dock
+killall SystemUIServer
+
+echo "macOS defaults applied successfully! Some changes may require a logout/restart."

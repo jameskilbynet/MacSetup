@@ -53,6 +53,7 @@ install_cask_apps() {
     local dev_tools=(
         "github"                 # GitHub Desktop
         "iterm2"                 # Terminal replacement
+        "warp"                   # Warp terminal
         "postman"                # API development environment
         "visual-studio-code"     # Code editor
         "powershell"             # PowerShell Core

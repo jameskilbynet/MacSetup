@@ -73,7 +73,9 @@ install_formulas() {
         "ansible"           # Automation tool
         "asciinema"         # Terminal session recorder
         "awscli"            # AWS command line interface
+        "govc"              # vSphere CLI
         "helm"              # Kubernetes package manager
+        "jq"                # JSON processor
         "kubernetes-cli"    # Kubernetes command line tool
         "mackup"            # Backup and restore application settings
         "mas"               # Mac App Store command line interface
