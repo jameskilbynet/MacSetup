@@ -30,7 +30,6 @@ HOMEBREW_FORMULAS=(
 
 # GUI applications (casks) - Web Browsers
 HOMEBREW_BROWSER_CASKS=(
-    "arc"                    # Arc browser
     "firefox"                # Mozilla Firefox
     "google-chrome"          # Google Chrome
 )
@@ -90,7 +89,6 @@ HOMEBREW_MOVED_CASKS=(
 declare -A MAS_APPLICATIONS=(
     ["926036361"]="Pocket"
     ["1102004240"]="iHosts"
-    ["568494494"]="Kaspersky Internet Security"
     ["803453959"]="Slack"
 )
 
