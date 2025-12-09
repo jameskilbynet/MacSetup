@@ -76,7 +76,6 @@ install_cask_apps() {
     
     # Media & Entertainment
     local media_apps=(
-        "kindle"                 # Amazon Kindle
         "plex"                   # Media server
         "plexamp"                # Music player
         "vlc"                    # Video player
