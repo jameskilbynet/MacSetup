@@ -26,6 +26,7 @@ chmod +x *.sh
 # Run the installation scripts
 ./brew.sh                 # Install Homebrew and command-line tools
 ./brew-apps.sh            # Install GUI applications
+./zsh-setup.sh            # Setup Oh-My-Zsh with plugins and theme
 ./defaults.sh             # Apply macOS system settings
 ```
 
@@ -54,14 +55,20 @@ chmod +x *.sh
 Installs Homebrew and essential command-line tools including:
 
 **Development & DevOps:**
-- ansible, awscli, helm, kubernetes-cli
+- ansible, awscli, helm, kubernetes-cli, kubectx, k9s
 - terraform, packer, vault (HashiCorp tools)
 - govc (vSphere CLI), jq (JSON processor)
+
+**Modern CLI Tools:**
+- bat (better cat), eza (modern ls), fd (better find)
+- ripgrep (faster grep), fzf (fuzzy finder)
+- git-delta, lazygit, httpie, tldr, zoxide
+- btop, htop (system monitors), ncdu (disk usage)
 
 **System Utilities:**
 - mas (Mac App Store CLI), mackup (settings backup)
 - nmap, tmux, watch, zsh
-- openssl, ruby
+- openssl, ruby, asciinema
 
 **Additional Features:**
 - Mac App Store applications (Pocket, iHosts, Slack, etc.)
@@ -96,8 +103,48 @@ Maintenance utilities for keeping Homebrew healthy:
 ```
 
 
+### `zsh-setup.sh`
+Configures Oh-My-Zsh with plugins and Powerlevel10k theme:
+
+**Features:**
+- Installs Oh-My-Zsh framework
+- Adds useful plugins (autosuggestions, syntax-highlighting, completions)
+- Configures Powerlevel10k theme
+- Adds DevOps-focused aliases (kubectl, terraform, ansible, git)
+- Installs Hack Nerd Font for terminal icons
+- Backs up existing configurations
+
+**Included Aliases:**
+- Kubernetes: `k`, `kgp`, `kgs`, `kgn`
+- Terraform: `tf`, `tfi`, `tfp`, `tfa`
+- Git: `gst`, `gpl`, `gps`, `gcm`
+- Modern tools: Uses `bat`, `eza`, `fd`, `rg` if installed
+- vSphere: `vcenter` (sets GOVC_URL)
+
 ### `defaults.sh`
-Applies macOS system preferences and settings.
+Applies comprehensive macOS system preferences:
+
+**Finder:**
+- Show all file extensions, hidden files, path bar, status bar
+- Full POSIX path in title bar
+- Keep folders on top, search current folder by default
+- Disable .DS_Store on network/USB volumes
+
+**Keyboard & Input:**
+- Enable key repeat, faster rates
+- Disable auto-correct
+
+**Screenshots:**
+- Save to ~/Desktop/Screenshots
+- PNG format, no shadows
+
+**Dock:**
+- Auto-hide with no delay
+- Smaller size, no recent apps
+
+**Performance:**
+- Disable window animations
+- Speed up Mission Control
 
 ## Customization
 

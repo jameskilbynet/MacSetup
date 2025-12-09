@@ -70,23 +70,45 @@ install_formulas() {
     
     # Define formula packages (command-line tools)
     local formulas=(
+        # DevOps & Infrastructure
         "ansible"           # Automation tool
-        "asciinema"         # Terminal session recorder
         "awscli"            # AWS command line interface
         "govc"              # vSphere CLI
         "helm"              # Kubernetes package manager
-        "jq"                # JSON processor
         "kubernetes-cli"    # Kubernetes command line tool
+        "kubectx"           # Switch kubectl contexts
+        "k9s"               # Kubernetes TUI
+        "hashicorp/tap/packer"  # Tool for building machine images
+        "hashicorp/tap/terraform"  # Infrastructure as code
+        "hashicorp/tap/vault"      # Secrets management
+        
+        # Modern CLI Tools
+        "bat"               # Better cat with syntax highlighting
+        "btop"              # Better system monitor
+        "eza"               # Modern ls replacement
+        "fd"                # Better find
+        "fzf"               # Fuzzy finder
+        "git-delta"         # Beautiful git diffs
+        "httpie"            # Better curl for APIs
+        "jq"                # JSON processor
+        "lazygit"           # Terminal UI for git
+        "ripgrep"           # Faster grep
+        "tldr"              # Simplified man pages
+        "zoxide"            # Smart cd
+        
+        # System Utilities
+        "asciinema"         # Terminal session recorder
+        "htop"              # Better top
         "mackup"            # Backup and restore application settings
         "mas"               # Mac App Store command line interface
+        "ncdu"              # Disk usage analyzer
         "nmap"              # Network discovery and security auditing
         "openssl"           # SSL/TLS cryptography library
-        "hashicorp/tap/packer"  # Tool for building machine images
-        "ruby"              # Ruby programming language
-        "hashicorp/tap/terraform"  # Infrastructure as code
         "tmux"              # Terminal multiplexer
-        "hashicorp/tap/vault"      # Secrets management
         "watch"             # Execute commands periodically
+        
+        # Programming Languages
+        "ruby"              # Ruby programming language
         "zsh"               # Z shell
     )
     
