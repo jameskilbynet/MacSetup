@@ -26,6 +26,7 @@ chmod +x *.sh
 # Run the installation scripts
 ./brew.sh                 # Install Homebrew and command-line tools
 ./brew-apps.sh            # Install GUI applications
+./git-setup.sh            # Configure git with global gitignore
 ./zsh-setup.sh            # Setup Oh-My-Zsh with plugins and theme
 ./defaults.sh             # Apply macOS system settings
 ```
@@ -102,6 +103,23 @@ Maintenance utilities for keeping Homebrew healthy:
 ./brew-maintenance.sh full      # Run all maintenance tasks
 ```
 
+
+### `git-setup.sh`
+Configures Git with a comprehensive global gitignore file:
+
+**Features:**
+- Installs global gitignore file (~/.gitignore_global)
+- Configures Git to use the global gitignore
+- Blocks macOS system files (.DS_Store, etc.) from all repositories
+- Sets default branch to 'main'
+- Enables colored Git output
+- Configures pull behavior
+
+**Blocked Files:**
+- macOS system files (.DS_Store, .AppleDouble, etc.)
+- Thumbnail files (._*)
+- IDE configuration (.idea/, .vscode/)
+- Vim swap files
 
 ### `zsh-setup.sh`
 Configures Oh-My-Zsh with plugins and Powerlevel10k theme:
