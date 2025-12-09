@@ -68,6 +68,7 @@ install_cask_apps() {
     # System Utilities
     local utilities=(
         "balenaetcher"           # USB/SD card imaging
+        "cloudflare-warp"        # Cloudflare WARP VPN
         "istat-menus"            # System monitoring
         "remote-desktop-manager" # Remote connection manager
     )
