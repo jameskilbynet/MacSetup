@@ -71,6 +71,7 @@ install_cask_apps() {
         "balenaetcher"           # USB/SD card imaging
         "cloudflare-warp"        # Cloudflare WARP VPN
         "istat-menus"            # System monitoring
+        "nordvpn"                # NordVPN client
         "remote-desktop-manager" # Remote connection manager
     )
     
