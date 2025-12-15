@@ -81,6 +81,7 @@ install_formulas() {
         "hashicorp/tap/packer"  # Tool for building machine images
         "hashicorp/tap/terraform"  # Infrastructure as code
         "hashicorp/tap/vault"      # Secrets management
+        "wireguard-tools"   # WireGuard VPN tools
         
         # Modern CLI Tools
         "bat"               # Better cat with syntax highlighting

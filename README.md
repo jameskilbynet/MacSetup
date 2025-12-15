@@ -59,6 +59,7 @@ Installs Homebrew and essential command-line tools including:
 - ansible, awscli, helm, kubernetes-cli, kubectx, k9s
 - terraform, packer, vault (HashiCorp tools)
 - govc (vSphere CLI), jq (JSON processor)
+- wireguard-tools (VPN configuration)
 
 **Modern CLI Tools:**
 - bat (better cat), eza (modern ls), fd (better find)
