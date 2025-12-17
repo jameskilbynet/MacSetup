@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+d#!/usr/bin/env bash
 
 # MacSetup Homebrew Installation Script
 # Installs Homebrew and essential command-line tools
@@ -84,7 +84,6 @@ install_formulas() {
         "wireguard-tools"   # WireGuard VPN tools
         
         # Modern CLI Tools
-        "bat"               # Better cat with syntax highlighting
         "btop"              # Better system monitor
         "eza"               # Modern ls replacement
         "fd"                # Better find
@@ -163,16 +162,23 @@ install_mas_apps() {
         read -p "Press Enter after signing in to continue, or Ctrl+C to skip MAS installations..."
     fi
     
-    # Define MAS applications with names for clarity
-    declare -A mas_apps=(
-        ["926036361"]="Pocket"
-        ["1102004240"]="iHosts"
-        ["568494494"]="Kaspersky Internet Security"
-        ["803453959"]="Slack"
+    # Define MAS applications with parallel arrays for Bash 3.2 compatibility
+    local mas_app_ids=(
+        "926036361"   # Pocket
+        "1102004240"  # iHosts
+        "568494494"   # Kaspersky Internet Security
+        "803453959"   # Slack
     )
     
-    for app_id in "${!mas_apps[@]}"; do
-        local app_name="${mas_apps[$app_id]}"
+    local mas_app_names=(
+        "Pocket"
+        "iHosts"
+        "Slack"
+    )
+    
+    for i in "${!mas_app_ids[@]}"; do
+        local app_id="${mas_app_ids[$i]}"
+        local app_name="${mas_app_names[$i]}"
         log_info "Installing $app_name (ID: $app_id)..."
         
         if mas install "$app_id"; then
