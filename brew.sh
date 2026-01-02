@@ -82,12 +82,14 @@ install_formulas() {
         "hashicorp/tap/terraform"  # Infrastructure as code
         "hashicorp/tap/vault"      # Secrets management
         "wireguard-tools"   # WireGuard VPN tools
+        # Note: wrangler (Cloudflare Workers CLI) should be installed via npm: npm install -g wrangler
         
         # Modern CLI Tools
         "btop"              # Better system monitor
         "eza"               # Modern ls replacement
         "fd"                # Better find
         "fzf"               # Fuzzy finder
+        "gh"                # GitHub CLI
         "git-delta"         # Beautiful git diffs
         "httpie"            # Better curl for APIs
         "jq"                # JSON processor
@@ -108,6 +110,7 @@ install_formulas() {
         "watch"             # Execute commands periodically
         
         # Programming Languages
+        "node"              # Node.js (includes npm)
         "ruby"              # Ruby programming language
         "zsh"               # Z shell
     )
