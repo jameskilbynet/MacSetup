@@ -87,9 +87,7 @@ HOMEBREW_MOVED_CASKS=(
 
 # Mac App Store applications (ID => Name mapping)
 declare -A MAS_APPLICATIONS=(
-    ["926036361"]="Pocket"
     ["1102004240"]="iHosts"
-    ["803453959"]="Slack"
 )
 
 # PowerShell modules to install
