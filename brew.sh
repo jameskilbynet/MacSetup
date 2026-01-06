@@ -142,6 +142,7 @@ install_gui_casks() {
         "deskpad"           # Virtual desktop backgrounds
         "elgato-stream-deck" # Stream Deck software
         "nextcloud"         # File sync and share
+        "slack"             # Team communication
         "zoom"              # Video conferencing (was 'zoomus')
     )
     
@@ -167,16 +168,11 @@ install_mas_apps() {
     
     # Define MAS applications with parallel arrays for Bash 3.2 compatibility
     local mas_app_ids=(
-        "926036361"   # Pocket
         "1102004240"  # iHosts
-        "568494494"   # Kaspersky Internet Security
-        "803453959"   # Slack
     )
     
     local mas_app_names=(
-        "Pocket"
         "iHosts"
-        "Slack"
     )
     
     for i in "${!mas_app_ids[@]}"; do
