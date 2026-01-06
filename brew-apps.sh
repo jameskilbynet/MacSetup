@@ -51,6 +51,7 @@ install_cask_apps() {
     
     # Development Tools
     local dev_tools=(
+        "claude"                 # Anthropic Claude Code Editor
         "docker"                 # Docker Desktop
         "github"                 # GitHub Desktop
         "iterm2"                 # Terminal replacement
