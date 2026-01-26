@@ -79,6 +79,7 @@ install_cask_apps() {
     
     # Media & Entertainment
     local media_apps=(
+        "obs"                    # OBS Studio - streaming/recording
         "plex"                   # Media server
         "plexamp"                # Music player
         "vlc"                    # Video player
