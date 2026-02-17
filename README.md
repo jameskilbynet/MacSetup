@@ -28,7 +28,7 @@ chmod +x *.sh
 ./brew-apps.sh            # Install GUI applications
 ./git-setup.sh            # Configure git with global gitignore
 ./zsh-setup.sh            # Setup Oh-My-Zsh with plugins and theme
-./defaults.sh             # Apply macOS system settings
+w           # Apply macOS system settings
 ```
 
 ### Option 2: Direct Download
