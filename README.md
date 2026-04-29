@@ -14,40 +14,48 @@ A collection of scripts to setup a factory fresh Mac with essential settings and
 
 ## Quick Start
 
-### Option 1: Local Installation (Recommended)
+### Option 1: One-command install (Recommended)
 
 ```shell
 git clone https://github.com/jameskilbynet/MacSetup.git
 cd MacSetup
+chmod +x *.sh
+./install.sh
+```
 
-# Make scripts executable
+`install.sh` will guide you through each step, letting you skip any that don't apply to your setup.
+
+### Option 2: Run scripts individually
+
+```shell
+git clone https://github.com/jameskilbynet/MacSetup.git
+cd MacSetup
 chmod +x *.sh
 
-# Run the installation scripts
 ./brew.sh                 # Install Homebrew and command-line tools
 ./brew-apps.sh            # Install GUI applications
 ./git-setup.sh            # Configure git with global gitignore
 ./zsh-setup.sh            # Setup Oh-My-Zsh with plugins and theme
-w           # Apply macOS system settings
+./defaults.sh             # Apply macOS system settings
 ```
 
-### Option 2: Direct Download
+### Option 3: Direct Download (no git required)
 
 ```shell
 cd ~/Downloads
 
-# Download and run system defaults
-curl -sL https://raw.githubusercontent.com/jameskilbynet/MacSetup/master/defaults.sh | bash
-
-# Download Homebrew scripts
+# Download and run the master installer
+curl -O https://raw.githubusercontent.com/jameskilbynet/MacSetup/master/install.sh
 curl -O https://raw.githubusercontent.com/jameskilbynet/MacSetup/master/brew.sh
 curl -O https://raw.githubusercontent.com/jameskilbynet/MacSetup/master/brew-apps.sh
 curl -O https://raw.githubusercontent.com/jameskilbynet/MacSetup/master/brew-maintenance.sh
+curl -O https://raw.githubusercontent.com/jameskilbynet/MacSetup/master/git-setup.sh
+curl -O https://raw.githubusercontent.com/jameskilbynet/MacSetup/master/gitignore_global
+curl -O https://raw.githubusercontent.com/jameskilbynet/MacSetup/master/zsh-setup.sh
+curl -O https://raw.githubusercontent.com/jameskilbynet/MacSetup/master/defaults.sh
 
-# Make executable and run
 chmod +x *.sh
-./brew.sh
-./brew-apps.sh
+./install.sh
 ```
 
 ## Scripts Overview

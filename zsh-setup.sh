@@ -220,7 +220,6 @@ install_nerd_font() {
     
     if ! brew list --cask font-hack-nerd-font &> /dev/null; then
         log_info "Installing Hack Nerd Font..."
-        brew tap homebrew/cask-fonts
         brew install --cask font-hack-nerd-font
         log_success "Installed Hack Nerd Font"
         log_warning "Set your terminal font to 'Hack Nerd Font' for best results"

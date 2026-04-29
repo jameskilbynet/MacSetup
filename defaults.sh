@@ -2,7 +2,7 @@
 
 #Adapted from https://github.com/pathikrit/mac-setup-script/raw/master/defaults.sh
 
-set -x 
+set -euo pipefail
 
 if [[ -z "${CI}" ]]; then
   sudo -v # Ask for the administrator password upfront

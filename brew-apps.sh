@@ -111,11 +111,13 @@ install_cask_apps() {
     
     for cask in "${all_casks[@]}"; do
         log_info "Installing $cask..."
-        if brew install --cask "$cask" 2>/dev/null; then
+        local error_output
+        if error_output=$(brew install --cask "$cask" 2>&1); then
             log_success "Installed: $cask"
             successful_casks+=("$cask")
         else
             log_error "Failed to install: $cask"
+            echo "$error_output" | tail -5 | sed 's/^/    /'
             failed_casks+=("$cask")
         fi
     done

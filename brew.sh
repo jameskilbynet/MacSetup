@@ -1,4 +1,4 @@
-d#!/usr/bin/env bash
+#!/usr/bin/env bash
 
 # MacSetup Homebrew Installation Script
 # Installs Homebrew and essential command-line tools
@@ -132,29 +132,6 @@ install_formulas() {
     fi
 }
 
-# Install cask applications (GUI apps that were incorrectly in formulas)
-install_gui_casks() {
-    log_info "Installing GUI applications via Homebrew Cask..."
-    
-    # These were incorrectly listed as formulas in the original script
-    local gui_casks=(
-        "discord"           # Communication platform
-        "deskpad"           # Virtual desktop backgrounds
-        "elgato-stream-deck" # Stream Deck software
-        "nextcloud"         # File sync and share
-        "slack"             # Team communication
-        "zoom"              # Video conferencing (was 'zoomus')
-    )
-    
-    for cask in "${gui_casks[@]}"; do
-        if brew install --cask "$cask" 2>/dev/null; then
-            log_success "Installed cask: $cask"
-        else
-            log_warning "Failed to install cask: $cask (may not exist or already installed)"
-        fi
-    done
-}
-
 # Install Mac App Store applications
 install_mas_apps() {
     log_info "Installing Mac App Store applications..."
@@ -205,7 +182,6 @@ main() {
     install_homebrew
     update_homebrew
     install_formulas
-    install_gui_casks
     install_mas_apps
     cleanup_homebrew
     
