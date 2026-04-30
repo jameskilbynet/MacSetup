@@ -66,6 +66,21 @@ run_step() {
     log_success "$name completed"
 }
 
+# Make sure `brew` is on PATH for the rest of this script.
+# brew.sh runs in a subshell, so its PATH changes don't propagate back here —
+# without this, later steps (brew-apps.sh, mackup-setup.sh, mas-apps.sh) fail
+# with "Homebrew is not installed" on a fresh machine.
+ensure_brew_in_path() {
+    if command -v brew &>/dev/null; then
+        return 0
+    fi
+    if [[ -x /opt/homebrew/bin/brew ]]; then
+        eval "$(/opt/homebrew/bin/brew shellenv)"
+    elif [[ -x /usr/local/bin/brew ]]; then
+        eval "$(/usr/local/bin/brew shellenv)"
+    fi
+}
+
 # ──────────────────────────────────────────────
 # Pre-flight checks
 # ──────────────────────────────────────────────
@@ -122,6 +137,8 @@ main() {
     run_step "Homebrew & CLI Tools" \
         "brew.sh" \
         "Installs Homebrew and CLI tools (kubectl, terraform, ansible, gh, etc.)."
+
+    ensure_brew_in_path
 
     run_step "GUI Applications" \
         "brew-apps.sh" \
