@@ -132,39 +132,6 @@ install_formulas() {
     fi
 }
 
-# Install Mac App Store applications
-install_mas_apps() {
-    log_info "Installing Mac App Store applications..."
-    
-    # Check if signed in to Mac App Store
-    if ! mas account &>/dev/null; then
-        log_warning "Please sign in to the Mac App Store before running this script"
-        log_info "You can sign in through System Preferences > Apple ID or by opening the App Store"
-        read -p "Press Enter after signing in to continue, or Ctrl+C to skip MAS installations..."
-    fi
-    
-    # Define MAS applications with parallel arrays for Bash 3.2 compatibility
-    local mas_app_ids=(
-        "1102004240"  # iHosts
-    )
-    
-    local mas_app_names=(
-        "iHosts"
-    )
-    
-    for i in "${!mas_app_ids[@]}"; do
-        local app_id="${mas_app_ids[$i]}"
-        local app_name="${mas_app_names[$i]}"
-        log_info "Installing $app_name (ID: $app_id)..."
-        
-        if mas install "$app_id"; then
-            log_success "Installed: $app_name"
-        else
-            log_error "Failed to install: $app_name (ID: $app_id)"
-        fi
-    done
-}
-
 # Cleanup
 cleanup_homebrew() {
     log_info "Cleaning up Homebrew..."
@@ -182,9 +149,8 @@ main() {
     install_homebrew
     update_homebrew
     install_formulas
-    install_mas_apps
     cleanup_homebrew
-    
+
     log_success "Homebrew setup completed!"
     log_info "You may need to restart your terminal or run 'source ~/.zprofile' to use newly installed tools"
 }

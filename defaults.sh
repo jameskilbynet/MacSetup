@@ -4,7 +4,7 @@
 
 set -euo pipefail
 
-if [[ -z "${CI}" ]]; then
+if [[ -z "${CI:-}" ]]; then
   sudo -v # Ask for the administrator password upfront
   # Keep-alive: update existing `sudo` time stamp until script has finished
   while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &

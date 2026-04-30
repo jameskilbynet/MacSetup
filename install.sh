@@ -121,7 +121,7 @@ main() {
 
     run_step "Homebrew & CLI Tools" \
         "brew.sh" \
-        "Installs Homebrew, CLI tools (kubectl, terraform, ansible, gh, etc.), and App Store apps."
+        "Installs Homebrew and CLI tools (kubectl, terraform, ansible, gh, etc.)."
 
     run_step "GUI Applications" \
         "brew-apps.sh" \
@@ -138,6 +138,14 @@ main() {
     run_step "macOS System Defaults" \
         "defaults.sh" \
         "Applies Finder, Dock, keyboard, screenshot, and performance tweaks."
+
+    run_step "Mackup (iCloud dotfile sync)" \
+        "mackup-setup.sh" \
+        "Syncs app settings and dotfiles via iCloud using Mackup."
+
+    run_step "Mac App Store Apps" \
+        "mas-apps.sh" \
+        "Installs App Store apps (iHosts, etc.) — requires Apple ID sign-in."
 
     log_header "Installation Complete 🎉"
     log_success "Your Mac is set up and ready to go!"

@@ -58,7 +58,6 @@ install_cask_apps() {
         "warp"                   # Warp terminal
         "postman"                # API development environment
         "visual-studio-code"     # Code editor
-        "powershell"             # PowerShell Core
     )
     
     # Creative & Productivity
@@ -135,6 +134,60 @@ install_cask_apps() {
     fi
 }
 
+# Install PowerShell via direct .pkg download from GitHub releases.
+# The homebrew-cask tap removed 'powershell', and the Microsoft tap formula
+# currently has a broken `depends_on macos: :high_sierra` call that modern
+# Homebrew rejects — so we go straight to the source.
+install_powershell() {
+    log_info "Installing PowerShell..."
+
+    if command -v pwsh &>/dev/null; then
+        log_info "PowerShell already installed at $(command -v pwsh), skipping"
+        return 0
+    fi
+
+    # Resolve latest stable release tag from GitHub
+    local latest_tag
+    latest_tag=$(curl -fsSL "https://api.github.com/repos/PowerShell/PowerShell/releases/latest" \
+        | python3 -c "import sys,json; print(json.load(sys.stdin)['tag_name'])" 2>/dev/null)
+
+    if [[ -z "$latest_tag" ]]; then
+        log_error "Could not determine latest PowerShell version from GitHub API"
+        log_info "Install manually: https://github.com/PowerShell/PowerShell/releases/latest"
+        return 1
+    fi
+
+    local version="${latest_tag#v}"  # strip leading 'v'
+    local arch
+    arch=$(uname -m)
+
+    local pkg_name
+    if [[ "$arch" == "arm64" ]]; then
+        pkg_name="powershell-${version}-osx-arm64.pkg"
+    else
+        pkg_name="powershell-${version}-osx-x64.pkg"
+    fi
+
+    local url="https://github.com/PowerShell/PowerShell/releases/download/${latest_tag}/${pkg_name}"
+    local tmp_pkg="/tmp/${pkg_name}"
+
+    log_info "Downloading PowerShell ${version} (${arch})..."
+    if ! curl -fsSL --progress-bar "$url" -o "$tmp_pkg"; then
+        log_error "Failed to download PowerShell from: $url"
+        return 1
+    fi
+
+    log_info "Installing package (requires sudo)..."
+    if sudo installer -pkg "$tmp_pkg" -target /; then
+        log_success "Installed: PowerShell ${version}"
+        rm -f "$tmp_pkg"
+    else
+        log_error "Failed to install PowerShell package"
+        rm -f "$tmp_pkg"
+        return 1
+    fi
+}
+
 # Setup PowerShell modules (separated from main cask installation)
 setup_powershell_modules() {
     log_info "Setting up PowerShell modules..."
@@ -145,11 +198,15 @@ setup_powershell_modules() {
         return 1
     fi
     
+    log_info "Setting PSGallery as trusted..."
+    pwsh -Command "Set-PSRepository -Name 'PSGallery' -InstallationPolicy Trusted" || true
+
     log_info "Installing VMware PowerCLI module..."
-    if pwsh -Command "Install-Module -Name VMware.PowerCLI -Scope CurrentUser -Force -AllowClobber"; then
+    if pwsh -Command "Install-Module -Name VMware.PowerCLI -Scope CurrentUser -Force -AllowClobber -Repository PSGallery"; then
         log_success "VMware PowerCLI module installed successfully"
     else
         log_error "Failed to install VMware PowerCLI module"
+        log_info "You can retry manually: pwsh -Command \"Install-Module VMware.PowerCLI -Scope CurrentUser -Force\""
     fi
 }
 
@@ -169,7 +226,8 @@ main() {
     
     check_homebrew
     install_cask_apps
-    
+    install_powershell
+
     # Ask user if they want to setup PowerShell modules
     echo
     read -p "Do you want to setup PowerShell modules? (y/N): " -n 1 -r
