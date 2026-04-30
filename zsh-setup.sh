@@ -143,6 +143,13 @@ configure_zshrc() {
         log_success "Updated plugins list"
     fi
     
+    # Ensure Homebrew is on PATH for interactive (non-login) shells
+    if ! grep -q "brew shellenv" "$ZSHRC"; then
+        echo '' >> "$ZSHRC"
+        echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> "$ZSHRC"
+        log_success "Added Homebrew shellenv to .zshrc"
+    fi
+
     # Add custom aliases if not already present
     if ! grep -q "# MacSetup Custom Aliases" "$ZSHRC"; then
         cat >> "$ZSHRC" << 'EOF'
