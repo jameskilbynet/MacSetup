@@ -61,6 +61,18 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 defaults write com.apple.finder WarnOnEmptyTrash -bool false
 
 ###############################################################################
+# Mouse
+###############################################################################
+
+# Enable right-click (secondary click) on Magic Mouse
+defaults write com.apple.AppleMultitouchMouse MouseButtonMode -string "TwoButton"
+
+# Enable right-click on trackpad
+defaults write com.apple.AppleMultitouchTrackpad TrackpadRightClick -bool true
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
+defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
+
+###############################################################################
 # Keyboard & Input
 ###############################################################################
 
